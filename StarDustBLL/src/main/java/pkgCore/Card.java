@@ -56,7 +56,6 @@ public class Card implements Comparable {
 	}
 	// Changes the input from the Deck class into a card.
 	
-
 	/**
 	 * @version Lab #1
 	 * @since Lab #1
