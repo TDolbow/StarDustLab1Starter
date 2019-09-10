@@ -66,6 +66,7 @@ public class Card implements Comparable {
 		Card c = (Card) o;
 		return c.geteRank().compareTo(this.geteRank());
 	}
+	
 
 	/**
 	 * @version Lab #1
