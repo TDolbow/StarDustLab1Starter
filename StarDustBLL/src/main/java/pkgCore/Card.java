@@ -55,7 +55,6 @@ public class Card implements Comparable {
 		this.eRank = eRank;
 	}
 	// Changes the input from the Deck class into a card.
-	
 	/**
 	 * @version Lab #1
 	 * @since Lab #1

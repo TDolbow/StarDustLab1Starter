@@ -58,6 +58,7 @@ public class Deck {
 		}
 		Collections.shuffle(cardsInDeck, new Random());
 	}
+	
 	/**
 	 * @version Lab #1
 	 * @since Lab #1
