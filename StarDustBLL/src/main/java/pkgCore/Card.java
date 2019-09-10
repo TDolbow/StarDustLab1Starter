@@ -51,7 +51,11 @@ public class Card implements Comparable {
 	 */
 	public Card(pkgEnum.eSuit eSuit, pkgEnum.eRank eRank) {
 		//TODO - Implement this method.  
+		this.eSuit = eSuit;
+		this.eRank = eRank;
 	}
+	// Changes the input from the Deck class into a card.
+	
 
 	/**
 	 * @version Lab #1
@@ -105,7 +109,7 @@ public class Card implements Comparable {
 	 */
 	public eRank geteRank() {
 		//FIXME - Implement this method.  This shouldn't return 'null', return the right value.
-		return null;
+		return eRank;
 	}
 
 	/**
@@ -117,7 +121,7 @@ public class Card implements Comparable {
 	 */
 	public eSuit geteSuit() {
 		//FIXME - Implement this method.  This shouldn't return 'null', return the right value.
-		return null;
+		return eSuit;
 	}
 
 	
@@ -128,7 +132,12 @@ public class Card implements Comparable {
 	 */
 	public boolean isWild() {
 		//FIXME - Implement this method.  This shouldn't return 'false', return the right value
-		return false;
+		if(Wild == true) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
@@ -140,6 +149,7 @@ public class Card implements Comparable {
 	 */
 	private void seteRank(eRank eRank) {
 		//TODO - Implement this method
+		this.eRank = eRank;
 	}
 
 	/**
@@ -151,6 +161,8 @@ public class Card implements Comparable {
 	 */
 	private void seteSuit(eSuit eSuit) {
 		//TODO - Implement this method
+		this.eSuit = eSuit;
+	
 	}
 	
 	

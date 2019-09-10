@@ -7,6 +7,9 @@ import java.util.EnumSet;
 import pkgEnum.eRank;
 import pkgEnum.eSuit;
 import pkgException.DeckException;
+import pkgCore.card;
+
+import java.util.Random;
 
 public class Deck {
 
@@ -44,11 +47,19 @@ public class Deck {
 	 *                    is shuffled.
 	 */
 	public Deck(int iNbrOfDecks) {
-		//TODO - Implement the constructor
+		
+		for(eSuit Suit: EnumSum.range(eSuit.HEARTS, eSuit.CLUBS)) {
+			for(eRank Rank: EnumSum.range(eSuit.TWO,eSuit.ACE)) {
+				for(int i = 0; i > iNbrOfDecks; i++) {
+					cardsInDeck.add(Card(Suit, Rank));
+
+				}
+			}
+		}
+		Collections.shuffle(cardsInDeck, new Random());
 	}
 
 	/**
-	 * @author BRG
 	 * @version Lab #1
 	 * @since Lab #1
 	 * @return Card object
@@ -56,7 +67,8 @@ public class Deck {
 	 */
 	public Card Draw() throws DeckException {
 		//FIXME - Implement this method.  Shouldn't return null, return the right value
-		return null;
+		cardsInDeck.remove(getiDeckCount()-1);
+		return cardsInDeck.get(getiDeckCount()-1);
 
 	}
 
@@ -70,7 +82,7 @@ public class Deck {
 	 */
 	public int getiDeckCount() {
 		//FIXME - Implement this method.  Shouldn't return 0, return the right value
-		return 0;
+		return cardsInDeck.size();
 	}
 
  
